@@ -9,7 +9,7 @@
   *ngIf="!login.isLoggedIn()"
   routerLink="/login"
    mat-icon-button 
-  class="example-icon favorite-icon "
+  class="example-icon padd favorite-icon "
    aria-label="Example icon-button with heart icon">
     Login
   </a>
@@ -23,11 +23,12 @@
    {{ login.getUser().username}}
   </a>
 
+
   <a
   *ngIf="!login.isLoggedIn()"
    routerLink="/signup" 
    mat-icon-button 
-   class="example-icon favorite-icon mr40 ml20" 
+   class="example-icon  favorite-icon mr40 ml20" 
    aria-label="Example icon-button with heart icon">
     Register
   </a>

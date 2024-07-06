@@ -9,11 +9,15 @@
                     </div>
                     <h1 class="text-center">Register Here!!</h1>
 
+                
+                    {{user | json}}
+
                     <form (ngSubmit)="formSubmit()" class="text-center">
 
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Username</mat-label>
-                            <input [(ngModel)]="user.userName" name="userName" matInput placeholder="Username">
+                            <!-- two way data binding -->
+                            <input [(ngModel)]="user.username" name="userName" matInput placeholder="Username">
                             <mat-hint>UserName must be unique!! </mat-hint>
                         </mat-form-field>
 

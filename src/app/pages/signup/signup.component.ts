@@ -15,17 +15,19 @@ constructor(private userService:UserService,
 
 
   public user={
-    userName:'',
+    //same as backend entity user class
+    username:'',
     password:'',
     firstName:'',
     lastName:'',
     email:'',
     phone:'',
+    profile:'student',
   }
 
   formSubmit(){
    console.log(this.user);
-   if(this.user.userName==''|| this.user.userName==null)
+   if(this.user.username==''|| this.user.username==null)
    {
     //alert("User is Required")
 
@@ -38,6 +40,7 @@ constructor(private userService:UserService,
     return;
   }
 
+  //from user Service
   this.userService.addUser(this.user).subscribe(
     (data)=>{
       //success
@@ -50,7 +53,7 @@ constructor(private userService:UserService,
       //error
       console.log(error);
       // alert('something went wrong');
-      this._snackBar.open("something went wrong!!","",{
+      this._snackBar.open(error,"",{
         duration:3000
       });
     }
